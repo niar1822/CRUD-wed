@@ -1,4 +1,6 @@
 import { Router } from "express";
+import { productValidator } from "../validators/Product.validator.js";
+import validate from "../middlewares/validate.js";
 
 import {
   getProducts,
@@ -26,7 +28,7 @@ router.get("/:id", getProduct);
  * Crear un producto
  * POST /api/products
  */
-router.post("/", createNewProduct);
+router.post("/", productValidator, validate, createNewProduct);
 
 /**
  * Actualizar un producto
