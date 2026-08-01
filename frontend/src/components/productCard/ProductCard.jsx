@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 
 export default function ProductCard({ producto }) {
   return (
-    <Card className="shadow-sm h-100">
+    <Card className="shadow-sm h-100" id="List">
       <Card.Body>
         <Card.Title>{producto.nombre}</Card.Title>
 
