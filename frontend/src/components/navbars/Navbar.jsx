@@ -9,9 +9,8 @@ export default function Navbars() {
         <Container>
           <Navbar.Brand href="#home">Productos Wed</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Agregar</Nav.Link>
-            <Nav.Link href="#features">Listar</Nav.Link>
-            <Nav.Link href="#pricing">Eliminar</Nav.Link>
+            <Nav.Link href="#form-container">Agregar</Nav.Link>
+            <Nav.Link href="#List">Listar</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
