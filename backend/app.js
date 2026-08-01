@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
-import errorHandler from "./middleware/errorHandler.js";
+import errorHandler from "./middlewares/errorHandler.js";
 
 // Importar rutas
 import productRoutes from "./routes/Product.routes.js";
@@ -14,8 +14,11 @@ const app = express();
 =========================== */
 
 // Permitir peticiones desde otros dominios
-app.use(cors());
-
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  }),
+);
 // Mostrar las peticiones en la consola
 app.use(morgan("dev"));
 
